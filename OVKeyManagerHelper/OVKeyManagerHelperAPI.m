@@ -55,6 +55,10 @@ BOOL createAccess(NSString *accessLabel, NSArray *appPaths, SecAccessRef *access
     
     //Create trusted application references; see SecTrustedApplications.h:
     err = SecTrustedApplicationCreateFromPath(NULL, &myself);
+    if(err != errSecSuccess) {
+        return handle_sec_error(err, error);
+    }
+    
     NSMutableArray *trustedApplications = [NSMutableArray arrayWithObject:(__bridge_transfer id)myself];
     
     BOOL __block failure = NO;
@@ -132,6 +136,10 @@ BOOL writeKey(const char * service,
                 CFRelease(access);
             }
             
+            if(item != NULL) {
+                CFRelease(item);
+            }
+            
             return NO;
         }
         
@@ -153,6 +161,9 @@ BOOL writeKey(const char * service,
         }
         
     } else { //Update password
+        if(returnStatus == errSecSuccess) {
+            SecKeychainItemFreeContent(NULL, passwordData);
+        }
         
         returnStatus = SecKeychainItemModifyAttributesAndData (item,         // the item reference
                                                                NULL,            // no change to attributes
@@ -168,6 +179,10 @@ BOOL writeKey(const char * service,
             return handle_sec_error(returnStatus, err);
         }
         
+    }
+    
+    if(item != NULL) {
+        CFRelease(item);
     }
     
 	return YES;

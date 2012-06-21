@@ -27,7 +27,6 @@
 		4CE27B361592264A005E86AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE27B341592264A005E86AD /* InfoPlist.strings */; };
 		4CE27B391592264A005E86AD /* OVKeyManagerTestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE27B381592264A005E86AD /* OVKeyManagerTestBase.m */; };
 		4CE27B4F159226DF005E86AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE27B4E159226DF005E86AD /* Foundation.framework */; };
-		4CE27B56159226DF005E86AD /* OVKeyManagerHelper.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CE27B55159226DF005E86AD /* OVKeyManagerHelper.1 */; };
 		4CE27B5E159227FB005E86AD /* com.physionconsulting.OVKeyManagerHelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CE27B4C159226DF005E86AD /* com.physionconsulting.OVKeyManagerHelper */; };
 		4CE27B661592285F005E86AD /* PHCErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE27B621592285F005E86AD /* PHCErrors.m */; };
 		4CE27B671592285F005E86AD /* PHCXPCSharedKeyRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE27B651592285F005E86AD /* PHCXPCSharedKeyRepository.m */; };
@@ -61,7 +60,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				4CE27B56159226DF005E86AD /* OVKeyManagerHelper.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -111,7 +109,6 @@
 		4CE27B4E159226DF005E86AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CE27B51159226DF005E86AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CE27B54159226DF005E86AD /* OVKeyManagerHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OVKeyManagerHelper-Prefix.pch"; sourceTree = "<group>"; };
-		4CE27B55159226DF005E86AD /* OVKeyManagerHelper.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OVKeyManagerHelper.1; sourceTree = "<group>"; };
 		4CE27B611592285F005E86AD /* PHCErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHCErrors.h; sourceTree = "<group>"; };
 		4CE27B621592285F005E86AD /* PHCErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHCErrors.m; sourceTree = "<group>"; };
 		4CE27B631592285F005E86AD /* PHCSharedKeyRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHCSharedKeyRepository.h; sourceTree = "<group>"; };
@@ -275,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				4CE27B51159226DF005E86AD /* main.m */,
-				4CE27B55159226DF005E86AD /* OVKeyManagerHelper.1 */,
 				4CE27B53159226DF005E86AD /* Supporting Files */,
 			);
 			path = OVKeyManagerHelper;
@@ -648,6 +644,7 @@
 					"OVKeyManagerHelper/OVKeyManagerHelper-Launchd.plist",
 				);
 				PRODUCT_NAME = com.physionconsulting.OVKeyManagerHelper;
+				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -672,6 +669,7 @@
 					"OVKeyManagerHelper/OVKeyManagerHelper-Launchd.plist",
 				);
 				PRODUCT_NAME = com.physionconsulting.OVKeyManagerHelper;
+				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
