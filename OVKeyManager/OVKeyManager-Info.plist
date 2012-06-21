@@ -35,7 +35,7 @@
 	<key>SMPrivilegedExecutables</key>
 	<dict>
 		<key>com.physionconsulting.OVKeyManagerHelper</key>
-		<string>identifier com.physionconsulting.OVKeyManagerHelper and certificate leaf[subject.CN] = "Mac Developer: Barry Wark (85KFBWPN4D)"</string>
+		<string>identifier com.physionconsulting.OVKeyManagerHelper and certificate leaf[subject.CN] = &quot;3rd Party Mac Developer Application: Physion Consulting LLC&quot;</string>
 	</dict>
 </dict>
 </plist>

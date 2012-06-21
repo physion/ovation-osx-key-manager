@@ -37,9 +37,6 @@ const char * SERVICE_NAME = "com.physionconsulting.OVKeyManagerHelper";
  
     if((self = [super init])) {
         self.label = helperLabel;
-        if(![self connectXPC:helperLabel error:err]) {
-            return nil;
-        }
     }
     
     return self;

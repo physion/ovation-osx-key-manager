@@ -22,7 +22,7 @@
 	<string>1</string>
 	<key>SMAuthorizedClients</key>
 	<array>
-		<string>identifier com.physionconsulting.OVKeyManager and certificate leaf[subject.CN] = &quot;Mac Developer: Barry Wark (85KFBWPN4D)&quot;</string>
+		<string>identifier com.physionconsulting.OVKeyManager and certificate leaf[subject.CN] = &quot;3rd Party Mac Developer Application: Physion Consulting LLC&quot;</string>
 	</array>
 </dict>
 </plist>
