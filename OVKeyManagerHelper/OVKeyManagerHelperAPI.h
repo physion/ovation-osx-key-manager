@@ -20,4 +20,4 @@ FOUNDATION_EXPORT const char * ADD_KEY_COMMAND;
 FOUNDATION_EXPORT const char * RESULT_STATUS_KEY;
 FOUNDATION_EXPORT const char * RESULT_ERR_MSG_KEY;
 
-FOUNDATION_EXPORT BOOL writeKey(const char * service, const char * keyID, const char * key, NSError * __autoreleasing *err);
+FOUNDATION_EXPORT BOOL writeKey(const char * service, const char * keyID, const char * key, NSArray *aclAppPaths, NSError * __autoreleasing *err);

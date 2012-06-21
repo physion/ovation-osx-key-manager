@@ -23,6 +23,7 @@
     if(writeKey("com.physionconsulting.ovation", 
                 [licenseInfo.keyID cStringUsingEncoding:NSUTF8StringEncoding], 
                 [key cStringUsingEncoding:NSUTF8StringEncoding],
+                [NSArray arrayWithObject:@"/opt/object/mac86_64/bin/ooqs"],
                 &error)) {
         dispatch_async(dispatch_get_main_queue(), success);
     } else {

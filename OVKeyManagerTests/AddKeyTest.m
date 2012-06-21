@@ -21,6 +21,7 @@
 
 - (void)addKey:(NSString *)key forLicense:(id<OVLicenseInfo>)licenseInfo success:(void (^)())success error:(repository_error_callback)err {
     self.addCalled = YES;
+    success();
 }
 - (void)testShouldAddKey {
     PHCAppDelegate *appDelegate = [[PHCAppDelegate alloc] init];
@@ -29,6 +30,7 @@
     appDelegate.group = @"group";
     appDelegate.sharedKey = @"sharedKey";
     
+    appDelegate.loginKeyRepository = self;
     appDelegate.systemKeyRepository = self;
     
     [appDelegate addUpdateKey:self]; 
