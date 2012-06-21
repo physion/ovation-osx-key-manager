@@ -21,7 +21,8 @@
 @property (nonatomic,strong) NSString * sharedKey;
 @property (nonatomic,strong) NSString * statusText;
 
-@property (nonatomic,strong) id<PHCSharedKeyRepository> keyRepository;
+@property (nonatomic,strong) id<PHCSharedKeyRepository> systemKeyRepository;
+@property (nonatomic,strong) id<PHCSharedKeyRepository> loginKeyRepository;
 
 - (IBAction)addUpdateKey:(id)sender;
 

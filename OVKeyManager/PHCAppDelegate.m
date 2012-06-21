@@ -9,10 +9,10 @@
 #import "PHCAppDelegate.h"
 #import "PHCErrors.h"
 #import "PHCXPCSharedKeyRepository.h"
+#import "PHCLoginSharedKeyRepository.h"
 
 @interface PHCAppDelegate ()
 
-@property (readwrite,nonatomic,strong) NSString * updateActionTitle;
 @property (readwrite,nonatomic,strong) NSError * keyRepositoryError;
 
 @end
@@ -22,18 +22,20 @@
 @synthesize window;
 @synthesize keyRepositoryError;
 @synthesize updateActionTitle;
-@synthesize keyRepository;
+@synthesize systemKeyRepository;
 @synthesize institution;
 @synthesize group;
 @synthesize sharedKey;
 @synthesize statusText;
+@synthesize loginKeyRepository;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {   
-    self.keyRepository = [[PHCXPCSharedKeyRepository alloc] initWithLabel:@"com.physionconsulting.OVKeyManagerHelper" 
+    self.systemKeyRepository = [[PHCXPCSharedKeyRepository alloc] initWithLabel:@"com.physionconsulting.OVKeyManagerHelper" 
                                                    connectionErrorCallback:^(NSError *err) {
                                                        self.keyRepositoryError = err;
                                                    }];
+    self.loginKeyRepository = [[PHCLoginSharedKeyRepository alloc] init];
 }
 
 - (NSString*)updateActionTitle {
@@ -50,14 +52,24 @@
     self.statusText = nil;
     self.keyRepositoryError = nil;
     
-    [self.keyRepository addKey:self.sharedKey 
-                    forLicense:licenseInfo
-                       success:^() {
-                           self.statusText = NSLocalizedString(@"Key updated succesfully", @"Shared Encryption Key Added/Updated Succesfully");
-                       }
-                         error:^(NSError *err) {
-                             self.keyRepositoryError = err; 
-                         }];
+    //Add the key to the login, then the system keychain
+    [self.loginKeyRepository addKey:self.sharedKey 
+                         forLicense:licenseInfo
+                            success:^() {
+                                self.statusText = NSLocalizedString(@"User key updated succesfully", @"Shared encryption key added/updated in login keychain.");
+                                
+                                [self.systemKeyRepository addKey:self.sharedKey
+                                                      forLicense:licenseInfo
+                                                         success:^() {
+                                                             self.statusText = NSLocalizedString(@"Key updated succesfully", @"Shared encryption key Added/Updated Succesfully");
+                                                         }
+                                                           error:^(NSError *err) {
+                                                               self.keyRepositoryError = err; 
+                                                           }];
+                            }
+                              error:^(NSError *err) {
+                                  self.keyRepositoryError = err;
+                              }];
 }
 
 @end

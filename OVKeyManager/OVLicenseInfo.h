@@ -3,7 +3,7 @@
 //  OVKeyManager
 //
 //  Created by Barry Wark on 6/20/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Physion Consulting LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,6 +14,8 @@
 @property (strong,nonatomic) NSString * group;
 @property (strong,nonatomic) NSString * product;
 @property (strong,nonatomic) NSString * licenseKey;
+
+@property (nonatomic,readonly) NSString * keyID;
 
 @end
 
@@ -28,5 +30,7 @@
 @property (strong,nonatomic) NSString * group;
 @property (strong,nonatomic) NSString * product;
 @property (strong,nonatomic) NSString * licenseKey;
+
+@property (nonatomic,readonly) NSString * keyID;
 
 @end

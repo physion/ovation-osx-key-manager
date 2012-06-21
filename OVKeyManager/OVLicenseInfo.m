@@ -3,7 +3,7 @@
 //  OVKeyManager
 //
 //  Created by Barry Wark on 6/20/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Physion Consulting LLC. All rights reserved.
 //
 
 #import "OVLicenseInfo.h"
@@ -29,4 +29,9 @@
     
     return self;
 }
+
+- (NSString*)keyID {
+    return [NSString stringWithFormat:@"%@::%@::%@", self.institution, self.group, self.product];
+}
+
 @end

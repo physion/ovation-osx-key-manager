@@ -149,9 +149,7 @@ const char * SERVICE_NAME = "com.physionconsulting.OVKeyManagerHelper";
     
     xpc_object_t message = xpc_dictionary_create(NULL, NULL, 0);
     xpc_dictionary_set_string(message, COMMAND_KEY, ADD_KEY_COMMAND);
-    xpc_dictionary_set_string(message, INSTITUTION_KEY, [[licenseInfo institution] cStringUsingEncoding:NSUTF8StringEncoding]);
-    xpc_dictionary_set_string(message, GROUP_KEY, [[licenseInfo group] cStringUsingEncoding:NSUTF8StringEncoding]);
-    xpc_dictionary_set_string(message, PRODUCT_KEY, [[licenseInfo product] cStringUsingEncoding:NSUTF8StringEncoding]);
+    xpc_dictionary_set_string(message, KEY_ID_KEY, [[licenseInfo keyID] cStringUsingEncoding:NSUTF8StringEncoding]);
     xpc_dictionary_set_string(message, SHARED_ENCRYPTION_KEY_KEY, [key cStringUsingEncoding:NSUTF8StringEncoding]);
     
     xpc_connection_send_message_with_reply(self.connection, message, dispatch_get_main_queue(), ^(xpc_object_t event) {

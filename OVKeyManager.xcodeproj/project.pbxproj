@@ -33,6 +33,8 @@
 		4CE27B671592285F005E86AD /* PHCXPCSharedKeyRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE27B651592285F005E86AD /* PHCXPCSharedKeyRepository.m */; };
 		4CE27B6B1592288B005E86AD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE27B6A1592288B005E86AD /* Security.framework */; };
 		4CE27B6D15922891005E86AD /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE27B6C15922891005E86AD /* ServiceManagement.framework */; };
+		4CE97F8F15926D4C00A3C967 /* PHCLoginSharedKeyRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE97F8E15926D4C00A3C967 /* PHCLoginSharedKeyRepository.m */; };
+		4CE97F9315926E3A00A3C967 /* LicenseInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE97F9215926E3A00A3C967 /* LicenseInfoTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,10 @@
 		4CE27B651592285F005E86AD /* PHCXPCSharedKeyRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHCXPCSharedKeyRepository.m; sourceTree = "<group>"; };
 		4CE27B6A1592288B005E86AD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4CE27B6C15922891005E86AD /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		4CE97F8D15926D4C00A3C967 /* PHCLoginSharedKeyRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHCLoginSharedKeyRepository.h; sourceTree = "<group>"; };
+		4CE97F8E15926D4C00A3C967 /* PHCLoginSharedKeyRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHCLoginSharedKeyRepository.m; sourceTree = "<group>"; };
+		4CE97F9115926E3A00A3C967 /* LicenseInfoTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LicenseInfoTests.h; sourceTree = "<group>"; };
+		4CE97F9215926E3A00A3C967 /* LicenseInfoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicenseInfoTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +256,8 @@
 				4CE27B371592264A005E86AD /* OVKeyManagerTestBase.h */,
 				4CE27B381592264A005E86AD /* OVKeyManagerTestBase.m */,
 				4CE27B321592264A005E86AD /* Supporting Files */,
+				4CE97F9115926E3A00A3C967 /* LicenseInfoTests.h */,
+				4CE97F9215926E3A00A3C967 /* LicenseInfoTests.m */,
 			);
 			path = OVKeyManagerTests;
 			sourceTree = "<group>";
@@ -298,6 +306,8 @@
 				4CE27B631592285F005E86AD /* PHCSharedKeyRepository.h */,
 				4CE27B641592285F005E86AD /* PHCXPCSharedKeyRepository.h */,
 				4CE27B651592285F005E86AD /* PHCXPCSharedKeyRepository.m */,
+				4CE97F8D15926D4C00A3C967 /* PHCLoginSharedKeyRepository.h */,
+				4CE97F8E15926D4C00A3C967 /* PHCLoginSharedKeyRepository.m */,
 			);
 			name = "Key Repository";
 			sourceTree = "<group>";
@@ -437,6 +447,7 @@
 				4CE27B671592285F005E86AD /* PHCXPCSharedKeyRepository.m in Sources */,
 				4C1D09C0159251440063AB2A /* OVKeyManagerHelperAPI.m in Sources */,
 				4C1D09CD1592562E0063AB2A /* OVLicenseInfo.m in Sources */,
+				4CE97F8F15926D4C00A3C967 /* PHCLoginSharedKeyRepository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +458,7 @@
 				4CE27B391592264A005E86AD /* OVKeyManagerTestBase.m in Sources */,
 				4C01867215923F95008C0642 /* AddKeyTest.m in Sources */,
 				4C0186731592408E008C0642 /* PHCAppDelegate.m in Sources */,
+				4CE97F9315926E3A00A3C967 /* LicenseInfoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,7 +603,7 @@
 		4CE27B401592264A005E86AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OVKeyManager.app/Contents/MacOS/OVKeyManager";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ovation Key Manager.app/Contents/MacOS/Ovation Key Manager";
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OVKeyManager/OVKeyManager-Prefix.pch";
@@ -605,7 +617,7 @@
 		4CE27B411592264A005E86AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OVKeyManager.app/Contents/MacOS/OVKeyManager";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ovation Key Manager.app/Contents/MacOS/Ovation Key Manager";
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OVKeyManager/OVKeyManager-Prefix.pch";

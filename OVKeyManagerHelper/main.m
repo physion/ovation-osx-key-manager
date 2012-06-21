@@ -65,12 +65,7 @@
 #import "PHCErrors.h"
 #import "OVKeyManagerHelperAPI.h"
 
-
-
-static BOOL writeKey(const char * service, const char * keyID, const char * key, NSError * __autoreleasing *err);
-
 static void __XPC_Peer_Event_Handler(xpc_connection_t connection, xpc_object_t event) {
-    syslog(LOG_NOTICE, "Received event in helper.");
     
 	xpc_type_t type = xpc_get_type(event);
     
@@ -94,16 +89,11 @@ static void __XPC_Peer_Event_Handler(xpc_connection_t connection, xpc_object_t e
         
         if([command isEqualToString:[NSString stringWithCString:ADD_KEY_COMMAND 
                                                        encoding:NSUTF8StringEncoding]]) {
-            
-            NSString *institution = [NSString stringWithCString:xpc_dictionary_get_string(event, INSTITUTION_KEY)
-                                                       encoding:NSUTF8StringEncoding];
-            NSString *group = [NSString stringWithCString:xpc_dictionary_get_string(event, GROUP_KEY)
-                                                encoding:NSUTF8StringEncoding];
-            NSString *product = [NSString stringWithCString:xpc_dictionary_get_string(event, PRODUCT_KEY)
-                                                   encoding:NSUTF8StringEncoding];
             NSString *sharedKey = [NSString stringWithCString:xpc_dictionary_get_string(event, SHARED_ENCRYPTION_KEY_KEY)
                                                      encoding:NSUTF8StringEncoding];
-            NSString * keyID = [NSString stringWithFormat:@"%@::%@::%@", institution, group, product];
+            
+            NSString * keyID = [NSString stringWithCString:xpc_dictionary_get_string(event, KEY_ID_KEY)
+                                                  encoding:NSUTF8StringEncoding];
             
             NSError *err;
             if(writeKey("com.physionconsulting.ovation", 
@@ -135,68 +125,6 @@ static void __XPC_Peer_Event_Handler(xpc_connection_t connection, xpc_object_t e
         }
         
 	}
-}
-
-static BOOL writeKey(const char * service, const char * keyID, const char * key, NSError * __autoreleasing *err)
-{
-	SecKeychainItemRef item = nil;
-	OSStatus returnStatus = SecKeychainAddGenericPassword(NULL,
-														  strlen(service), //service
-														  service, 
-														  strlen(keyID),
-														  keyID, //username 
-														  strlen(key), 
-														  key, //password
-														  &item);
-	
-	if (returnStatus != noErr || !item) {
-		NSString *errMsg = (NSString*)CFBridgingRelease(SecCopyErrorMessageString(returnStatus, NULL));
-		
-		if(item != NULL) {
-			CFRelease(item);
-		}
-		
-        if(*err != NULL) {
-            *err = [NSError errorWithDomain:OVATION_KEY_MANAGER_ERROR_DOMAIN 
-                                       code:KEYCHAIN_ERROR
-                                   userInfo:[NSDictionary dictionaryWithObject:errMsg
-                                                                        forKey:NSLocalizedDescriptionKey]];
-        }
-		
-		return NO;
-	}
-	
-	// set item kind to "Ovation Database Key"
-	const char *description = "Ovation Database Encryption Key";
-	SecKeychainAttribute kindAttr;
-	kindAttr.tag = kSecDescriptionItemAttr;
-	kindAttr.length = (UInt32)strlen(description);
-	kindAttr.data = (void*)description;
-	
-	SecKeychainAttributeList attrs;
-	attrs.count = 1;
-	attrs.attr = &kindAttr;
-	
-	returnStatus = SecKeychainItemModifyAttributesAndData(item, &attrs, 0, NULL);
-	
-	if(returnStatus != noErr) {
-		NSString *errMsg = (NSString*)CFBridgingRelease(SecCopyErrorMessageString(returnStatus, NULL));
-		
-		if(item != NULL) {
-			CFRelease(item);
-		}
-		
-        if(*err != NULL) {
-            *err = [NSError errorWithDomain:OVATION_KEY_MANAGER_ERROR_DOMAIN 
-                                       code:KEYCHAIN_ERROR
-                                   userInfo:[NSDictionary dictionaryWithObject:errMsg
-                                                                        forKey:NSLocalizedDescriptionKey]];
-        }
-		
-		return NO;
-	}
-	
-	return YES;
 }
 
 

@@ -10,9 +10,13 @@
 
 @implementation OVKeyManagerTestBase
 
-- (NSSet*)keys:(repository_error_callback)error { return nil; }
-- (void)addKey:(NSString*)key forLicense:(id)sharedKey error:(repository_error_callback)err {}
-- (void)updateKey:(NSString*)key forLicense:(id)sharedKey error:(repository_error_callback)err {}
+- (NSSet*)keys:(repository_error_callback)error { return  nil; }
+- (void)addKey:(NSString*)key forLicense:(id<OVLicenseInfo>)licenseInfo 
+       success:(void (^)())success
+         error:(repository_error_callback)err {}
+- (void)updateKey:(NSString*)key forLicense:(id<OVLicenseInfo>)licenseInfo 
+          success:(void (^)())success
+            error:(repository_error_callback)err {}
 
 @end
 
