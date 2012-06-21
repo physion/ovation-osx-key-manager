@@ -545,7 +545,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
@@ -568,7 +568,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 			};
@@ -583,6 +583,7 @@
 				GCC_PREFIX_HEADER = "OVKeyManager/OVKeyManager-Prefix.pch";
 				INFOPLIST_FILE = "OVKeyManager/OVKeyManager-Info.plist";
 				PRODUCT_NAME = "Ovation Key Manager";
+				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -596,6 +597,7 @@
 				GCC_PREFIX_HEADER = "OVKeyManager/OVKeyManager-Prefix.pch";
 				INFOPLIST_FILE = "OVKeyManager/OVKeyManager-Info.plist";
 				PRODUCT_NAME = "Ovation Key Manager";
+				VERSIONING_SYSTEM = "apple-generic";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -648,6 +650,7 @@
 					"OVKeyManagerHelper/OVKeyManagerHelper-Launchd.plist",
 				);
 				PRODUCT_NAME = com.physionconsulting.OVKeyManagerHelper;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -671,6 +674,7 @@
 					"OVKeyManagerHelper/OVKeyManagerHelper-Launchd.plist",
 				);
 				PRODUCT_NAME = com.physionconsulting.OVKeyManagerHelper;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
