@@ -16,6 +16,7 @@
 		4C1D09C0159251440063AB2A /* OVKeyManagerHelperAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D09BF159251440063AB2A /* OVKeyManagerHelperAPI.m */; };
 		4C1D09C1159251440063AB2A /* OVKeyManagerHelperAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D09BF159251440063AB2A /* OVKeyManagerHelperAPI.m */; };
 		4C1D09CD1592562E0063AB2A /* OVLicenseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D09CC1592562E0063AB2A /* OVLicenseInfo.m */; };
+		4CA3ED7715D3F37300C13FC3 /* UpdateEnableTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3ED7615D3F37300C13FC3 /* UpdateEnableTest.m */; };
 		4CE27B0F1592264A005E86AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE27B0E1592264A005E86AD /* Cocoa.framework */; };
 		4CE27B191592264A005E86AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE27B171592264A005E86AD /* InfoPlist.strings */; };
 		4CE27B1B1592264A005E86AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE27B1A1592264A005E86AD /* main.m */; };
@@ -85,6 +86,8 @@
 		4C1D09BF159251440063AB2A /* OVKeyManagerHelperAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVKeyManagerHelperAPI.m; path = OVKeyManagerHelper/OVKeyManagerHelperAPI.m; sourceTree = "<group>"; };
 		4C1D09C9159254710063AB2A /* OVLicenseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVLicenseInfo.h; sourceTree = "<group>"; };
 		4C1D09CC1592562E0063AB2A /* OVLicenseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVLicenseInfo.m; sourceTree = "<group>"; };
+		4CA3ED7515D3F37300C13FC3 /* UpdateEnableTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateEnableTest.h; sourceTree = "<group>"; };
+		4CA3ED7615D3F37300C13FC3 /* UpdateEnableTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateEnableTest.m; sourceTree = "<group>"; };
 		4CE27B0A1592264A005E86AD /* Ovation Key Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ovation Key Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE27B0E1592264A005E86AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4CE27B111592264A005E86AD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -255,6 +258,8 @@
 				4CE27B321592264A005E86AD /* Supporting Files */,
 				4CE97F9115926E3A00A3C967 /* LicenseInfoTests.h */,
 				4CE97F9215926E3A00A3C967 /* LicenseInfoTests.m */,
+				4CA3ED7515D3F37300C13FC3 /* UpdateEnableTest.h */,
+				4CA3ED7615D3F37300C13FC3 /* UpdateEnableTest.m */,
 			);
 			path = OVKeyManagerTests;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 				4C01867215923F95008C0642 /* AddKeyTest.m in Sources */,
 				4C0186731592408E008C0642 /* PHCAppDelegate.m in Sources */,
 				4CE97F9315926E3A00A3C967 /* LicenseInfoTests.m in Sources */,
+				4CA3ED7715D3F37300C13FC3 /* UpdateEnableTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
