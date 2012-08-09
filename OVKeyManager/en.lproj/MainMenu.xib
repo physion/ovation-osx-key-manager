@@ -1007,7 +1007,7 @@
 											<string key="NSFrame">{{165, 49}, {296, 22}}</string>
 											<reference key="NSSuperview" ref="896824285"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="133667899"/>
+											<reference key="NSNextKeyView" ref="584549149"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSSecureTextFieldCell" key="NSCell" id="124463640">
@@ -1025,27 +1025,27 @@
 												</array>
 											</object>
 										</object>
-										<object class="NSTextField" id="133667899">
+										<object class="NSTextField" id="584549149">
 											<reference key="NSNextResponder" ref="896824285"/>
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{22, 22}, {138, 17}}</string>
 											<reference key="NSSuperview" ref="896824285"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="115421491"/>
+											<reference key="NSNextKeyView" ref="50720207"/>
 											<string key="NSReuseIdentifierKey">_NS:1505</string>
 											<bool key="NSEnabled">YES</bool>
-											<object class="NSTextFieldCell" key="NSCell" id="280873445">
+											<object class="NSTextFieldCell" key="NSCell" id="336614092">
 												<int key="NSCellFlags">68288064</int>
 												<int key="NSCellFlags2">272630784</int>
 												<string key="NSContents">Re-enter shared Key:</string>
 												<reference key="NSSupport" ref="566813918"/>
 												<string key="NSCellIdentifier">_NS:1505</string>
-												<reference key="NSControlView" ref="133667899"/>
+												<reference key="NSControlView" ref="584549149"/>
 												<reference key="NSBackgroundColor" ref="872681"/>
 												<reference key="NSTextColor" ref="513698850"/>
 											</object>
 										</object>
-										<object class="NSSecureTextField" id="115421491">
+										<object class="NSSecureTextField" id="50720207">
 											<reference key="NSNextResponder" ref="896824285"/>
 											<int key="NSvFlags">266</int>
 											<string key="NSFrame">{{165, 20}, {296, 22}}</string>
@@ -1054,13 +1054,13 @@
 											<reference key="NSNextKeyView" ref="594942019"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 											<bool key="NSEnabled">YES</bool>
-											<object class="NSSecureTextFieldCell" key="NSCell" id="480735005">
+											<object class="NSSecureTextFieldCell" key="NSCell" id="184385108">
 												<int key="NSCellFlags">343014976</int>
 												<int key="NSCellFlags2">272630848</int>
 												<string key="NSContents"/>
 												<reference key="NSSupport" ref="566813918"/>
 												<string key="NSCellIdentifier">_NS:9</string>
-												<reference key="NSControlView" ref="115421491"/>
+												<reference key="NSControlView" ref="50720207"/>
 												<bool key="NSDrawsBackground">YES</bool>
 												<reference key="NSBackgroundColor" ref="934350204"/>
 												<reference key="NSTextColor" ref="416878335"/>
@@ -1138,7 +1138,6 @@
 							<string key="NSFrame">{{17, 27}, {481, 14}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:1505</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="348723119">
@@ -1809,7 +1808,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">nextKeyView</string>
 						<reference key="source" ref="284004441"/>
-						<reference key="destination" ref="115421491"/>
+						<reference key="destination" ref="50720207"/>
 					</object>
 					<int key="connectionID">1252</int>
 				</object>
@@ -1832,10 +1831,10 @@
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: self.sharedKeyRepeat</string>
-						<reference key="source" ref="115421491"/>
+						<reference key="source" ref="50720207"/>
 						<reference key="destination" ref="976324537"/>
 						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="115421491"/>
+							<reference key="NSSource" ref="50720207"/>
 							<reference key="NSDestination" ref="976324537"/>
 							<string key="NSLabel">value: self.sharedKeyRepeat</string>
 							<string key="NSBinding">value</string>
@@ -1852,7 +1851,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">nextKeyView</string>
-						<reference key="source" ref="115421491"/>
+						<reference key="source" ref="50720207"/>
 						<reference key="destination" ref="154575685"/>
 					</object>
 					<int key="connectionID">1253</int>
@@ -2509,8 +2508,8 @@
 						<int key="objectID">769</int>
 						<reference key="object" ref="262985237"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="133667899"/>
-							<reference ref="115421491"/>
+							<reference ref="584549149"/>
+							<reference ref="50720207"/>
 							<reference ref="284004441"/>
 							<reference ref="19234713"/>
 							<reference ref="154575685"/>
@@ -2626,29 +2625,29 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1240</int>
-						<reference key="object" ref="133667899"/>
+						<reference key="object" ref="584549149"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="280873445"/>
+							<reference ref="336614092"/>
 						</array>
 						<reference key="parent" ref="262985237"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1241</int>
-						<reference key="object" ref="115421491"/>
+						<reference key="object" ref="50720207"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="480735005"/>
+							<reference ref="184385108"/>
 						</array>
 						<reference key="parent" ref="262985237"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1242</int>
-						<reference key="object" ref="480735005"/>
-						<reference key="parent" ref="115421491"/>
+						<reference key="object" ref="184385108"/>
+						<reference key="parent" ref="50720207"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">1243</int>
-						<reference key="object" ref="280873445"/>
-						<reference key="parent" ref="133667899"/>
+						<reference key="object" ref="336614092"/>
+						<reference key="parent" ref="584549149"/>
 					</object>
 				</array>
 			</object>
@@ -2685,17 +2684,17 @@
 				<dictionary class="NSMutableDictionary" key="1241.IBAttributePlaceholdersKey">
 					<object class="IBAccessibilityAttribute" key="AccessibilityDescription">
 						<string key="name">AccessibilityDescription</string>
-						<reference key="object" ref="115421491"/>
+						<reference key="object" ref="50720207"/>
 						<string key="accessibilityValue">Shared encryption key</string>
 					</object>
 					<object class="IBAccessibilityAttribute" key="AccessibilityHelp">
 						<string key="name">AccessibilityHelp</string>
-						<reference key="object" ref="115421491"/>
+						<reference key="object" ref="50720207"/>
 						<string key="accessibilityValue">Enter the shared encryption key for the licensed group.</string>
 					</object>
 					<object class="IBToolTipAttribute" key="ToolTip">
 						<string key="name">ToolTip</string>
-						<reference key="object" ref="115421491"/>
+						<reference key="object" ref="50720207"/>
 						<string key="toolTip">Shared encryption key</string>
 					</object>
 				</dictionary>
