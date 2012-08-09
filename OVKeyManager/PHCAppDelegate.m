@@ -28,6 +28,11 @@
 @synthesize sharedKey;
 @synthesize statusText;
 @synthesize loginKeyRepository;
+@synthesize sharedKeyRepeat;
+
++ (NSSet*)keyPathsForValuesAffectingSharedKeyIsValid {
+    return [NSSet setWithArray:@[@"sharedKey", @"sharedKeyRepeat"]];
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {   
@@ -72,4 +77,7 @@
                               }];
 }
 
+- (BOOL)sharedKeyIsValid {
+    return (![self.sharedKey isEqualToString:@""] && [self.sharedKey isEqualToString:self.sharedKeyRepeat]);
+}
 @end

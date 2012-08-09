@@ -19,7 +19,9 @@
 @property (nonatomic,strong) NSString * institution;
 @property (nonatomic,strong) NSString * group;
 @property (nonatomic,strong) NSString * sharedKey;
+@property (nonatomic,strong) NSString * sharedKeyRepeat;
 @property (nonatomic,strong) NSString * statusText;
+@property (nonatomic,readonly) BOOL sharedKeyIsValid;
 
 @property (nonatomic,strong) id<PHCSharedKeyRepository> systemKeyRepository;
 @property (nonatomic,strong) id<PHCSharedKeyRepository> loginKeyRepository;
